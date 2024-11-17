@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .app {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            width: 250px;
+            height: 450px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .app h3 {
+            margin: 0;
+            margin-bottom: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .map-area {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 10px;
+            background: #ccc;
+            /* Grey background for map */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <h3>Map</h3>
+        <div class="map-area">
+            <p>Map View</p>
+        </div>
+        <div class="button-group">
+            <button onclick="location.href='route-planner.html'">Route Planner</button>
+            <button>End</button>
+        </div>
+    </div>
+</body>
+
+</html>

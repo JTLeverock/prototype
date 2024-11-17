@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .app {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            width: 250px;
+            height: 450px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            margin: 10px 0;
+            font-size: 14px;
+            display: block;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            width: 80%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h3>Edit Menu</h3>
+        <label><input type="checkbox" checked> Route Planner</label>
+        <label><input type="checkbox" checked> Map</label>
+        <label><input type="checkbox"> Event Schedule</label>
+        <button onclick="location.href='settings.html'">Save Changes</button>
+    </div>
+</body>
+</html>

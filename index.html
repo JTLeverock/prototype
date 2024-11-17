@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,11 +42,13 @@
             border-radius: 10px;
             width: 100%;
             margin-top: 10px;
-            background: #ccc;
-            /* Grey background for map */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .button-group {
@@ -72,18 +73,21 @@
         }
     </style>
 </head>
-
 <body>
     <div class="app">
         <h3>Map</h3>
         <div class="map-area">
-            <p>Map View</p>
+            <!-- Embedded Google Maps -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509446!2d144.95373631531878!3d-37.8172099797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e0a5cdbdb96!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1695645362804!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
         </div>
         <div class="button-group">
-            <button onclick="location.href='route-planner.html'">Route Planner</button>
+            <button onclick="location.href='route-planner.html'">Start</button>
             <button>End</button>
         </div>
     </div>
 </body>
-
 </html>

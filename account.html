@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UF Map</title>
+    <title>Link Account</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f7f7f7;
+            background-color: white;
         }
 
         .app {
@@ -35,36 +35,27 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
-        .map-area {
-            flex: 1;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .description {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #555;
         }
 
         .button-group {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
-            gap: 10px;
-            margin-top: 10px;
+            flex-direction: column;
+            gap: 15px;
         }
 
         button {
-            flex: 1;
-            padding: 8px 15px;
+            padding: 10px 15px;
             font-size: 14px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             background-color: #007BFF;
             color: white;
+            width: 100%;
         }
 
         button:hover {
@@ -82,19 +73,23 @@
 </head>
 <body>
     <div class="app">
-        <h3>UF Map</h3>
-        <div class="map-area">
-            <!-- Embedded Google Map centered at UF -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.2133743096466!2d-82.33917332453377!3d29.643632631624084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e8c19bd012ee3b%3A0x4634ec7fd9f54c2!2sUniversity%20of%20Florida!5e0!3m2!1sen!2sus!4v1695645362804!5m2!1sen!2sus"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-        </div>
-        <div class="button-group">
-            <button class="secondary-btn" onclick="location.href='menu.html'">Back to Menu</button>
-            <button onclick="location.href='route-planner.html'">Route Planner</button>
-        </div>
+        <h3>GatorLink Login</h3>
+        <p class="description">Log in with your GatorLink credentials to access your account.</p>
+        <form id="loginForm">
+            <input type="text" id="username" name="username" placeholder="GatorLink Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <button class="secondary-btn" onclick="location.href='menu.html'">Back to Menu</button>    
     </div>
+    </div>
+    <script>
+        // Handle login submission
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission
+            location.href = 'menu.html';
+        });
+    </script>
 </body>
 </html>
